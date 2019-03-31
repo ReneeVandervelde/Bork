@@ -7,7 +7,6 @@
     <meta name="robots" content="index, follow" />
 
     <title>🐶 Bork.</title>
-    <link rel="stylesheet" href="css/screen-v3.2.css" type="text/css" media="all" />
     <style>
         body, html {
             background-color: #403F3E;
@@ -22,12 +21,24 @@
             height: 80vmin;
             width: 80vmin;
         }
+        #bork-link {
+            width: 9vmin;
+            height: 5vmin;
+            position: absolute;
+            transform: translateX(-11vmin) translateY(-5vmin);
+        }
     </style>
 </head>
 <body>
     <!-- Bork Bork -->
     <section>
         <img src="bork.svg" alt="Bork Bork" title="Bork Bork" />
+        <a href="#" id="bork-link"></a>
     </section>
+    <script>
+        let bork = new Audio('bork.mp3');
+        let link = document.getElementById("bork-link");
+        link.onclick = function(event) { bork.play(); return false; }
+    </script>
 </body>
 </html>
