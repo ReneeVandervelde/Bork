@@ -55,7 +55,11 @@
     <script>
         let bork = new Audio('bork.mp3');
         let link = document.getElementById("bork-link");
-        link.onclick = function(event) { bork.play(); return false; }
+        link.onclick = function(event) { 
+            bork.play(); 
+            ga('send', 'event', 'bork', 'boop'); 
+            return false; 
+        }
     </script>
 </body>
 </html>
